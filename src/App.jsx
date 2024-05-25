@@ -1,11 +1,13 @@
+import About from "./components/About";
 import MainBg from "./components/MainBg";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <Header></Header>
       <MainBg></MainBg>
+      <Navbar></Navbar>
+      <About></About>
     </>
   );
 }
