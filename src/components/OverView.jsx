@@ -19,7 +19,6 @@ function OverView() {
         {services.map((service) => (
           <div key={service.icon}>
             <Tilt
-             
               className="parallax-effect-glare-scale   "
               perspective={500}
               glareColor=" #4287f5"
@@ -34,34 +33,33 @@ function OverView() {
                   src={service.icon}
                   alt={service.title}
                 />
-                <div className="m-5  dark:text-slate-300">{service.title}</div>
+                <div className="m-5 ">{service.title}</div>
               </div>
             </Tilt>
           </div>
         ))}
       </div>
 
-
       <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
         <span className=" w-2/3 md:w-[25%] pb-2 text-2xl md:text-4xl text-pink-500 border-b-2 border-gray-400">
           TECHNOLOGIES
         </span>
         <div className=" flex flex-wrap justify-center items-center md:px-14 ">
-        {technologies.map((technology) => (
-          <div
-            key={technology.name}
-            className="m-4 mt-5 h-[100px] w-[100px] rounded-3xl shadow-2xl border-[1px] border-violet-400 hover:shadow-violet-600 "
-          >
-            <img className="p-2" src={technology.icon} alt={technology.name} />
-            <div className=" justify-center flex  dark:bg-gray-800 ">
-              {technology.name}
+          {technologies.map((technology) => (
+            <div
+              key={technology.name}
+              className="m-4 mt-5 h-[100px] w-[100px] rounded-3xl shadow-2xl border-[1px] border-violet-400 hover:shadow-violet-600 "
+            >
+              <img
+                className="p-2"
+                src={technology.icon}
+                alt={technology.name}
+              />
+              <div className=" justify-center flex  ">{technology.name}</div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      </div>
-      
-      
     </>
   );
 }

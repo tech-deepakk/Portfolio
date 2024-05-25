@@ -6,12 +6,12 @@ import OverView from "./components/OverView";
 function App() {
   return (
     <>
-      <div className="h-screen  dark:bg-gray-800 ">
+      <div className="h-screen">
         <MainBg></MainBg>
         <Navbar></Navbar>
         <About></About>
       </div>
-      <div className=" h-auto bg-white dark:bg-gray-800 ">
+      <div className=" h-auto bg-white">
         <OverView></OverView>
       </div>
     </>
