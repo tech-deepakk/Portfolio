@@ -5,9 +5,11 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <MainBg></MainBg>
-      <Navbar></Navbar>
-      <About></About>
+      <div className=" h-screen">
+        <MainBg></MainBg>
+        <Navbar></Navbar>
+        <About></About>
+      </div>
     </>
   );
 }
