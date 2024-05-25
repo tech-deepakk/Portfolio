@@ -5,7 +5,7 @@ import { LuDownload } from "react-icons/lu";
 function About() {
   return (
     <div className="h-[90%] flex-col flex  justify-center md:flex-row md:items-center md:justify-between  px-8">
-      <div className=" hidden md:w-1/2 md:h-full  md:flex md:flex-col md:items-center md:justify-center gap-2 ">
+      <div className=" hidden md:w-1/2 md:h-full  md:flex md:flex-col  md:justify-center gap-2 md:pl-14">
         <span className=" text-4xl md:text-6xl">
           Hi, I'm <span className=" text-pink-400">DEEPAK </span>
         </span>
@@ -13,7 +13,7 @@ function About() {
           I am a MERN Stack Developer &
         </span>
         <span className="text-xl text-slate-600">Coder</span>
-        <div className="mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2">
+        <div className=" w-[7rem] mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2">
           <a href={"#"} download={"resume"} target="_blank">
             Resume
           </a>
