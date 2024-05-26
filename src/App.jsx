@@ -2,6 +2,7 @@ import About from "./components/About";
 import MainBg from "./components/MainBg";
 import Navbar from "./components/Navbar";
 import OverView from "./components/OverView";
+import Project from "./components/Project";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </div>
       <div className=" h-auto bg-white">
         <OverView></OverView>
+        <Project></Project>
       </div>
     </>
   );
