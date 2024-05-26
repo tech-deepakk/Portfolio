@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import MainBg from "./components/MainBg";
 import Navbar from "./components/Navbar";
 import OverView from "./components/OverView";
@@ -15,6 +16,7 @@ function App() {
       <div className=" h-auto bg-white">
         <OverView></OverView>
         <Project></Project>
+        <Contact></Contact>
       </div>
     </>
   );
