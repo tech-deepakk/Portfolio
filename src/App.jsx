@@ -1,5 +1,6 @@
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import MainBg from "./components/MainBg";
 import Navbar from "./components/Navbar";
 import OverView from "./components/OverView";
@@ -17,6 +18,7 @@ function App() {
         <OverView></OverView>
         <Project></Project>
         <Contact></Contact>
+        <Footer></Footer>
       </div>
     </>
   );

@@ -44,7 +44,7 @@ function Project() {
                 alt={project.name}
               />
             </div>
-            <div className="text-2xl text-pink-600 font-bold">
+            <div className="text-xl md:text-2xl  text-pink-600 font-bold">
               {project.name}
             </div>
 
