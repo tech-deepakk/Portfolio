@@ -27,7 +27,7 @@ function OverView() {
               scale={1.02}
               gyroscope={true}
             >
-              <div className="p-3 mx-3 md:m-6 md:p-6 flex flex-col justify-evenly items-center border-2 border-violet-400  rounded-2xl">
+              <div className="p-3 mx-3 md:m-6 md:p-6 flex flex-col justify-evenly items-center border-2 border-violet-700  rounded-2xl">
                 <img
                   className="h-[150px] w-[150px]  "
                   src={service.icon}
@@ -48,7 +48,7 @@ function OverView() {
           {technologies.map((technology) => (
             <div
               key={technology.name}
-              className="m-4 mt-5 h-[100px] w-[100px] rounded-3xl shadow-2xl border-[1px] border-violet-400 hover:shadow-violet-600 "
+              className="m-4 mt-5 h-[100px] w-[100px] rounded-3xl shadow-2xl border-[1px] border-red-400 hover:shadow-pink-600 "
             >
               <img
                 className="p-2"
