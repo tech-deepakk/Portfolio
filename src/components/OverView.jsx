@@ -4,7 +4,7 @@ import { technologies, services } from "../constants/info";
 function OverView() {
   return (
     <>
-      <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
+      <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20" id="About">
         <span className=" w-2/3 md:w-[25%] pb-2 text-3xl md:text-4xl text-pink-500 border-b-2 border-gray-400">
           INTRODUCTION
         </span>
@@ -40,7 +40,7 @@ function OverView() {
         ))}
       </div>
 
-      <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
+      <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20" id="Skills">
         <span className=" w-2/3 md:w-[25%] pb-2 text-2xl md:text-4xl text-pink-500 border-b-2 border-gray-400">
           TECHNOLOGIES
         </span>

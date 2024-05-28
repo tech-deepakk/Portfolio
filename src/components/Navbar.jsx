@@ -3,6 +3,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [selectMenu, setSelectMenu] = useState(false);
@@ -15,9 +16,9 @@ function Navbar() {
       <ul
         className={`${
           selectMenu
-            ? "absolute top-0 z-10 flex-col opacity-[.85]"
-            : "items-center"
-        } flex  justify-between h-auto bg-slate-800 text-white p-3 md:h-14 `}
+            ? "absolute top-0 z-10 flex-col opacity-[.85] h-auto"
+            : "items-center h-14"
+        } flex  justify-between  bg-slate-800 text-white p-3 md:h-16 `}
       >
         <li className={`${selectMenu && "px-4 mb-4"} md:hidden`}>
           <span className=" text-white font-semibold text-2xl cursor-pointer">
@@ -36,37 +37,50 @@ function Navbar() {
           } md:flex justify-start w-2/3 gap-8 p-4`}
         >
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            Home
+            <Link to="Home" activeClass="Home" spy={true}>
+              Home
+            </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            About
+            <Link to="About" activeClass="" spy={true}>
+              About
+            </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            Skills
+            <Link to="Skills" activeClass="" spy={true}>
+              Skills
+            </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            Education
+            <Link to="Projects" activeClass="" spy={true}>
+              Projects
+            </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            Contect
+            <Link to="Contact" activeClass="active" spy={true}>
+              Contact
+            </Link>
           </li>
         </div>
 
         <div className="flex gap-4 md:gap-6 md:p-4">
-          <li className="">
-            <span className=" text-white font-bold text-2xl  hover:text-slate-300 cursor-pointer">
+          <li className="text-white font-bold text-2xl  hover:text-slate-300 cursor-pointer">
+            <a href="https://github.com/tech-deepakk" target="_blank">
               <FaGithub />
-            </span>
+            </a>
           </li>
-          <li className="">
-            <span className=" text-white font-bold text-2xl hover:text-slate-300 cursor-pointer">
+          <li className="text-white font-bold text-2xl hover:text-slate-300 cursor-pointer">
+            <a
+              href="https://www.linkedin.com/in/deepak-panchal-733806290/"
+              target="_blank"
+            >
               <FaLinkedin />
-            </span>
+            </a>
           </li>
-          <li className="">
-            <span className=" text-white font-bold text-2xl hover:text-slate-300 cursor-pointer">
+          <li className="text-white font-bold text-2xl hover:text-slate-300 cursor-pointer">
+            <a href="mailto:tech.deepakpanchal@gmail.com" target="_blank">
               <BiLogoGmail />
-            </span>
+            </a>
           </li>
         </div>
       </ul>

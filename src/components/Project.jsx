@@ -6,7 +6,7 @@ import { SiGithub } from "react-icons/si";
 
 function Project() {
   return (
-    <>
+    <div id="Projects">
       <div className=" mt-6 pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
         <span className=" w-2/3 md:w-[25%] pb-2 text-3xl md:text-4xl text-pink-500 border-b-2 border-gray-400">
           PROJECTS
@@ -54,7 +54,7 @@ function Project() {
           </Tilt>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

@@ -5,7 +5,7 @@ import resume from "../assets/resume.pdf";
 
 function About() {
   return (
-    <div className="h-[90%] flex-col flex  justify-center md:flex-row md:items-center md:justify-between  px-8">
+    <div className="h-[90%] flex-col flex  justify-center md:flex-row md:items-center md:justify-between  px-8" id="Home">
       <div className=" hidden md:w-1/2 md:h-full  md:flex md:flex-col  md:justify-center gap-2 md:pl-14">
         <span className=" text-4xl md:text-6xl">
           Hi, I'm <span className=" text-pink-400">DEEPAK </span>
