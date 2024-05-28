@@ -1,6 +1,7 @@
 import React from "react";
 import profileImg from "../assets/Developer.jpg";
 import { LuDownload } from "react-icons/lu";
+import resume from "../assets/resume.pdf";
 
 function About() {
   return (
@@ -13,11 +14,11 @@ function About() {
           I am a MERN Stack Developer &
         </span>
         <span className="text-xl text-slate-600">Coder</span>
-        <div className=" w-[7rem] mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2">
-          <a href={"#"} download={"resume"} target="_blank">
-            Resume
+        <div className=" w-[7rem] mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2 hover:bg-pink-100 ">
+          <span>Resume</span>
+          <a href={resume} download={"resume"} target="_blank">
+            <LuDownload />
           </a>
-          <LuDownload />
         </div>
       </div>
       <div className=" mt-4 md:w-1/2 md:h-full flex md:items-center md:justify-center ">
@@ -35,11 +36,11 @@ function About() {
           I am a MERN Stack Developer &
         </span>
         <span className=" text-slate-600">Coder</span>
-        <div className="mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2">
-          <a href={"#"} download={"resume"} target="_blank">
-            Resume
+        <div className="mt-4 border-2 rounded-lg p-2 border-pink-400 flex items-center gap-2 hover:bg-pink-100 ">
+          <span>Resume</span>
+          <a href={resume} download={"resume"} target="_blank">
+            <LuDownload />
           </a>
-          <LuDownload />
         </div>
       </div>
     </div>
