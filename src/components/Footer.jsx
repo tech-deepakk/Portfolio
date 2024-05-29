@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 function Footer() {
   return (
     <div className="bg-slate-900">
-      <footer className="h-[auto] flex  items-center justify-between text-white px-6 md:px-20 ">
+      <footer className="h-[auto] flex items-center justify-between text-white px-3 md:px-20 ">
         <div className="text-yellow-500">
           <span className="">© 2024 DEEPAK PANCHAL</span>
         </div>
