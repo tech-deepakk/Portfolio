@@ -25,7 +25,6 @@ function OverView() {
               glareEnable={true}
               glareMaxOpacity={0.5}
               scale={1.02}
-              gyroscope={true}
             >
               <div className="p-3 mx-3 md:m-6 md:p-6 flex flex-col justify-evenly items-center border-2 border-violet-700  rounded-2xl">
                 <img
