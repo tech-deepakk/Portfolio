@@ -1,7 +1,34 @@
-import React from "react";
 import contact from "../assets/contact.jpg";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const form = useRef();
+  const name = useRef();
+  const email = useRef();
+  const message = useRef();
+
+  console.log(form.current);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_phsiopj", "template_245bp7e", form.current, {
+        publicKey: "Co0dQyc2kPHIIAK_6",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          name.current.value = "";
+          email.current.value = "";
+          message.current.value = "";
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div id="Contact">
       <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
@@ -12,14 +39,19 @@ function Contact() {
       <div className=" mt-5 px-6">
         <div className="flex flex-wrap flex-row justify-around">
           <div className="lg:w-[40%]">
-            <form className="m-5 flex flex-col gap-3">
+            <form
+              ref={form}
+              className="m-5 flex flex-col gap-3"
+              onSubmit={sendEmail}
+            >
               <label className="flex flex-col gap-3">
                 <span className="text-yellow-600 font-medium mb-2">
                   Your Name
                 </span>
                 <input
+                  ref={name}
                   type="text"
-                  name="name"
+                  name="user_name"
                   placeholder="Whats your good name?"
                   className=" bg-slate-200 py-4 px-6 rounded-lg outline-none border-none font-medium "
                 ></input>
@@ -30,8 +62,9 @@ function Contact() {
                   Your Email
                 </span>
                 <input
+                  ref={email}
                   type="email"
-                  name="eamil"
+                  name="user_email"
                   placeholder="Whats your web address?"
                   className=" bg-slate-200 py-4 px-6 rounded-lg outline-none border-none font-medium "
                 ></input>
@@ -42,8 +75,9 @@ function Contact() {
                   your Message
                 </span>
                 <textarea
+                  ref={message}
                   row={5}
-                  name="text"
+                  name="message"
                   placeholder="Whats you want to say?"
                   className=" bg-slate-200 py-4 px-6 rounded-lg outline-none border-none font-medium "
                 ></textarea>
