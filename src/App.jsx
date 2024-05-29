@@ -9,7 +9,7 @@ import Project from "./components/Project";
 function App() {
   return (
     <>
-      <div className="h-screen">
+      <div className="min-h-screen">
         <MainBg></MainBg>
         <Navbar></Navbar>
         <About></About>
