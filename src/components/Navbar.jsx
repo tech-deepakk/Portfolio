@@ -37,27 +37,62 @@ function Navbar() {
           } md:flex justify-start w-2/3 gap-8 p-4`}
         >
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            <Link to="Home" activeClass="Home" spy={true}>
+            <Link
+              to="Home"
+              activeClass="Home"
+              spy={true}
+              onClick={() => {
+                setSelectMenu(false);
+              }}
+            >
               Home
             </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            <Link to="About" activeClass="" spy={true}>
+            <Link
+              to="About"
+              activeClass=""
+              spy={true}
+              onClick={() => {
+                setSelectMenu(false);
+              }}
+            >
               About
             </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            <Link to="Skills" activeClass="" spy={true}>
+            <Link
+              to="Skills"
+              activeClass=""
+              spy={true}
+              onClick={() => {
+                setSelectMenu(false);
+              }}
+            >
               Skills
             </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            <Link to="Projects" activeClass="" spy={true}>
+            <Link
+              to="Projects"
+              activeClass=""
+              spy={true}
+              onClick={() => {
+                setSelectMenu(false);
+              }}
+            >
               Projects
             </Link>
           </li>
           <li className=" hover:text-yellow-400 hover:border-b-2 hover:border-yellow-400 cursor-pointer">
-            <Link to="Contact" activeClass="active" spy={true}>
+            <Link
+              to="Contact"
+              activeClass="active"
+              spy={true}
+              onClick={() => {
+                setSelectMenu(false);
+              }}
+            >
               Contact
             </Link>
           </li>
