@@ -1,36 +1,39 @@
 import contact from "../assets/contact.jpg";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 function Contact() {
   const form = useRef();
-  const name = useRef();
-  const email = useRef();
-  const message = useRef();
-
-  console.log(form.current);
+  const name = useRef("");
+  const email = useRef("");
+  const message = useRef("");
 
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs
-      .sendForm("service_phsiopj", "template_245bp7e", form.current, {
-        publicKey: "Co0dQyc2kPHIIAK_6",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          name.current.value = "";
-          email.current.value = "";
-          message.current.value = "";
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+    if (email.current.value && name.current.value && message.current.value) {
+      emailjs
+        .sendForm("service_phsiopj", "template_245bp7e", form.current, {
+          publicKey: "Co0dQyc2kPHIIAK_6",
+        })
+        .then(
+          () => {
+            toast.success("Message sent successfully");
+            name.current.value = "";
+            email.current.value = "";
+            message.current.value = "";
+          },
+          (error) => {
+            toast.error(error.text);
+          }
+        );
+    } else {
+      toast.error("Please fill all the fields");
+    }
   };
   return (
     <div id="Contact">
+      <Toaster />
       <div className=" pt-6 px-6 flex flex-col gap-3 md:gap-6 md:px-20">
         <span className=" w-2/3 md:w-[25%] pb-2 text-3xl md:text-4xl text-pink-500 border-b-2 border-gray-400">
           Contact
